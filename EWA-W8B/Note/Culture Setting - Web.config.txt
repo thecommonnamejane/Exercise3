@@ -1,0 +1,6 @@
+<globalization culture="en-MY" uiCulture="en-MY" />
+
+NOTE: Place it inside <system.web> node.
+
+culture   --> afffect culture-dependent functions like date formatting, etc.
+uiCulture --> affect what language resources are loaded.

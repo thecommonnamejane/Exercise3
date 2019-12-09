@@ -1,0 +1,41 @@
+﻿@model Event
+
+@{
+    ViewBag.Title = "Demo3 : Date Input";
+
+    // TODO: Set min (-30 days) and max (+30 days) date range
+    string min = "TODO";
+    string max = "TODO";
+}
+
+@section head {
+    <style>
+        small {
+            display: block;
+            color: red;
+        }
+    </style>
+}
+
+<form method="post">
+    @Html.ValidationSummary(true)
+
+    <div class="grid">
+        @Html.LabelFor(m => m.Date)
+        <div>
+            @* TODO: Convert text box to built-in date picker *@
+
+            @Html.TextBoxFor(m => m.Date)
+
+            <small>(@min to @max)</small>
+        </div>
+        @Html.ValidationMessageFor(m => m.Date)
+    
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <button>Submit</button>
+    <button type="reset">Reset</button>
+</form>

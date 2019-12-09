@@ -1,0 +1,12 @@
+﻿@* TODO: Update model type *@
+@model IEnumerable<Event>
+
+@{
+    ViewBag.Title = "Demo5 : Event Groups (By Date)";
+}
+
+@* TODO: Update loop *@
+@foreach (var e in Model)
+{
+    <div>@e.Date.ToString("yyyy-MM-dd") - @e.Name</div>
+}

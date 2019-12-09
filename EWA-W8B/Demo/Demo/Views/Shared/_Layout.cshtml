@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/PagedList.css" rel="stylesheet">
+    <link href="~/Content/app.css" rel="stylesheet">
+    <link href="~/Images/favicon.png" rel="shortcut icon">
+    @RenderSection("head", false)
+</head>
+<body>
+    <header>
+        <h1><a href="~/">Date and Time</a></h1>
+    </header>
+
+    <nav>
+        <a href="~/Home/Index">Index</a>
+        <a href="~/Home/Demo1">Demo1</a>
+        <a href="~/Home/Demo2">Demo2</a>
+        <a href="~/Home/Demo3">Demo3</a>
+        <a href="~/Home/Demo4">Demo4</a>
+        <a href="~/Home/Demo5">Demo5</a>
+        <a href="~/Home/Demo6">Demo6</a>
+    </nav>
+
+    <main>
+        <div class="alert info">@Html.Raw(TempData["info"])</div>
+        <div class="alert success">@Html.Raw(TempData["success"])</div>
+        <div class="alert warning">@Html.Raw(TempData["warning"])</div>
+        <div class="alert error">@Html.Raw(TempData["error"])</div>
+
+        <h1>@ViewBag.Title</h1>
+        <div>
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer>
+        Developed by <b>BAE SUZY</b> &middot;
+        Copyrighted &copy; @DateTime.Today.Year
+    </footer>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
+    @RenderSection("foot", false)
+</body>
+</html>

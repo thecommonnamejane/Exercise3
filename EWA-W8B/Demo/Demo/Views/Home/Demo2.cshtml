@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Demo2 : Running Dates";
+}
+
+<form>
+    @Html.DropDownList("Month", (SelectList)ViewBag.MonthList)
+    @Html.DropDownList("Year",  (SelectList)ViewBag.YearList)
+    <button>Submit</button>
+</form>
+
+<br>
+
+@* TODO: List all days of month *@
+
+
+@section foot {
+    <script>
+        // TODO: Submit form if select list changed
+
+
+    </script>
+}

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Event>
+
+@{
+    ViewBag.Title = "Demo4 : Import and Truncate Events";
+}
+
+<form method="post" action="/Home/Import" enctype="multipart/form-data">
+    <input type="file" name="file" accept="text/plain">
+    <button>Import</button>
+    <button data-post="/Home/Truncate">Truncate</button>
+</form>
+
+<hr>
+
+@foreach (var e in Model)
+{
+    <div style="margin-bottom: 2px">
+        <span class="badge">@e.Id</span>
+        @e.Date.ToString("yyyy-MM-dd") - @e.Name
+    </div>
+}
+

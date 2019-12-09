@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Demo1 : Formatting";
+    DateTime now = DateTime.Now;
+}
+
+<p>
+    <div>Name        = @System.Globalization.CultureInfo.CurrentCulture.Name</div>
+    <div>DisplayName = @System.Globalization.CultureInfo.CurrentCulture.DisplayName</div>
+    <div>EnglishName = @System.Globalization.CultureInfo.CurrentCulture.EnglishName</div>
+    <div>NativeName  = @System.Globalization.CultureInfo.CurrentCulture.NativeName</div>
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>Method</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>ToString()</td>
+        <td>@now.ToString()</td>
+    </tr>
+    <tr>
+        <td>ToShortDateString()</td>
+        <td>@now.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <td>ToLongDateString()</td>
+        <td>@now.ToLongDateString()</td>
+    </tr>
+    <tr>
+        <td>ToShortTimeString()</td>
+        <td>@now.ToShortTimeString()</td>
+    </tr>
+    <tr>
+        <td>ToLongTimeString()</td>
+        <td>@now.ToLongTimeString()</td>
+    </tr>
+    <tr>
+        <td>Custom = dd-MM-yyyy</td>
+        <td>@now.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <td>Custom = dd-MMM-yyyy</td>
+        <td>@now.ToString("dd-MMM-yyyy")</td>
+    </tr>
+    <tr>
+        <td>Custom = dd-MMMM-yyyy</td>
+        <td>@now.ToString("dd-MMMM-yyyy")</td>
+    </tr>
+    <tr>
+        <td>Custom = dd-MMMM-yyyy (dddd)</td>
+        <td>@now.ToString("dd-MMMM-yyyy (dddd)")</td>
+    </tr>
+    <tr>
+        <td>Custom = hh:mm:ss tt</td>
+        <td>@now.ToString("hh:mm:ss tt")</td>
+    </tr>
+    <tr>
+        <td>Custom = HH:mm</td>
+        <td>@now.ToString("HH:mm")</td>
+    </tr>
+</table>
+

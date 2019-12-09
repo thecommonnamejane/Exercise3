@@ -1,0 +1,69 @@
+﻿@* TODO *@
+
+@{
+    ViewBag.Title = "Demo6 : Calendar Layout";
+    string heading = new DateTime(ViewBag.Year, ViewBag.Month, 1).ToString("MMMM yyyy");
+}
+
+@section head {
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        .cal {
+            /* TODO: Grid layout */
+            
+            border: 1px solid #999;
+        }
+
+        .cal > h3 {
+            border: 1px solid #999;
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .cal > div {
+            border: 1px solid #999;
+            padding: 5px;
+            min-height: 80px;
+        }
+
+        .cal > div.x {
+            background-color: #ccc;
+        }
+    </style>
+}
+
+<form>
+    @Html.DropDownList("Month", (SelectList)ViewBag.MonthList)
+    @Html.DropDownList("Year",  (SelectList)ViewBag.YearList)
+    <button>Submit</button>
+</form>
+
+<h2>@heading</h2>
+
+@* TODO: Make days of week culture-aware *@
+
+<div class="cal">
+    <h3>Monday</h3>
+    <h3>Tuesday</h3>
+    <h3>Wednesday</h3>
+    <h3>Thursday</h3>
+    <h3>Friday</h3>
+    <h3>Saturday</h3>
+    <h3>Sunday</h3>
+
+    @* TODO: Display dictionary items (date and its events) *@
+    
+
+</div>
+
+@section foot {
+    <script>
+        $('select').on('change', function (e) {
+            this.form.submit();
+        });
+    </script>
+}

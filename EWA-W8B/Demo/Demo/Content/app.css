@@ -1,0 +1,240 @@
+﻿body, input, select, textarea, button {
+    font: 15px calibri;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: #ccc;
+    padding: 10px 50px;
+}
+
+header h1 {
+    margin: 0;
+    background: url(/Images/favicon.png)
+                no-repeat left center;
+    padding-left: 40px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    background-color: #999;
+    padding: 0 50px;
+    display: flex;
+    white-space: nowrap;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #666;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+main {
+    padding: 20px 50px;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+/* Table CSS */
+.table {
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+.table th {
+    background-color: #666;
+    color: #fff;
+}
+
+.table tr:hover td {
+    background-color: #ccc;
+}
+
+.details th {
+    text-align: left;
+}
+
+.details th::after {
+    content: ' : ';
+}
+
+/* Sorting CSS */
+/* NOTE: ▴ (25b4) and ▾ (25bE) */
+.table th a {
+    color: inherit;
+}
+
+.table th a.ASC::after {
+    content: ' \25b4 ';
+}
+
+.table th a.DESC::after {
+    content: ' \25be ';
+}
+
+
+/* WebGrid CSS */
+.footer td {
+    word-spacing: 5px;
+}
+
+.footer a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #666;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.footer a:hover {
+    background-color: #333;
+}
+
+/* Form Grid CSS */
+label > * {
+    vertical-align: top;
+}
+
+.grid {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    place-content: start start;
+    place-items: center stretch;
+}
+
+.grid > label {
+    white-space: nowrap;
+    background-color: #ccc;
+    font-weight: bold;
+    padding: 5px;
+    place-self: stretch stretch;
+}
+
+.grid > label::after {
+    content: ' : ';
+}
+
+/* Error Message CSS */
+.validation-summary-errors, .field-validation-error {
+    color: red;
+}
+
+.validation-summary-errors ul {
+    margin: 0;
+}
+
+/* Alert CSS */
+.info {
+    background-color: #2196f3;
+}
+
+.success {
+    background-color: #4caf50;
+}
+
+.warning {
+    background-color: #ff5722;
+}
+
+.error {
+    background-color: #f44336;
+}
+
+.alert {
+    color: #fff;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: fade-out 2s ease 2s forwards;
+}
+
+.alert:empty {
+    display: none;
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Badge CSS */
+.badge {
+    display: inline-block;
+    background-color: #666;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 3px;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Popup CSS */
+.popup {
+    position: relative;
+}
+
+.popup > div {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 3px;
+    top: 50%;
+    left: 100%;
+    transform: translate(5px, -50%);
+    padding: 10px;
+    white-space: nowrap;
+    display: none;
+}
+
+.popup:hover > div {
+    display: block;
+}
+
+/* Upload CSS */
+.upload {
+    display: block;
+}
+
+.upload input {
+    display: none;
+}
+
+.upload img {
+    display: block;
+    border: 1px solid #333;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
